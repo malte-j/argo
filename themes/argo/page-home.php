@@ -6,6 +6,7 @@ get_header();
 </header>
 <h1>some text:</h1>
 cool.
+<?php the_header_image_tag(); ?>
 <p style="color: <?php the_field('services'); ?>"></p>
 
  
