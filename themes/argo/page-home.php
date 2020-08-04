@@ -5,6 +5,7 @@ get_header();
 <h1><?php the_field('intro_text'); ?></h1>
 </header>
 <h1>some text:</h1>
+cool.
 <p style="color: <?php the_field('services'); ?>"></p>
 
  

@@ -25,6 +25,8 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'argo' ); ?></a>
 
+	<?php /*
+
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
 			<?php
@@ -57,13 +59,32 @@
 			?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
+
+*/ ?>
+
+			<header>
+				<?php require get_template_directory() . '/media/logo.svg.php'; ?>
+				<nav>
+				<?php
+					wp_nav_menu(
+						array(
+							'theme_location' => 'menu-1',
+							'menu_id'        => 'primary-menu',
+						)
+					);
+					?>
+
+				</nav>
+			</header>
+
+	
 <?php
 if(is_page(home))
 {
-echo 'yes';
+// echo 'yes';
 }
 else
 {
-echo 'no';
+// echo 'no';
 }
 ?>
