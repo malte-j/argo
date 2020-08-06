@@ -55,7 +55,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .main-header li {
 	list-style: none;
-	padding: 2rem;
 	position: relative;
 	margin: 1rem;
 	cursor: pointer;
@@ -64,6 +63,8 @@ h1, h2, h3, h4, h5, h6 {
 .main-header li a {
 	color: #000;
 	text-decoration: none;
+	padding: 2rem;
+	display: block;
 }
 
 .main-header li::after {

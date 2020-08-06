@@ -45,7 +45,6 @@
 
 .main-header li {
 	list-style: none;
-	padding: 2rem;
 	position: relative;
 	margin: 1rem;
 	cursor: pointer;
@@ -54,6 +53,8 @@
 .main-header li a {
 	color: #000;
 	text-decoration: none;
+	padding: 2rem;
+	display: block;
 }
 
 .main-header li::after {
