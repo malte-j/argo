@@ -16,7 +16,8 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Space+Mono&display=swap" rel="stylesheet">
+	
 	<?php wp_head(); ?>
 </head>
 
@@ -64,8 +65,8 @@
 
 			<header class="main-header">
 				<div class="inner">
-					<?php require get_template_directory() . '/media/logo.svg.php'; ?>
-					
+					<a href="/"><?php require get_template_directory() . '/media/logo.svg.php'; ?></a>
+						
 					<nav>
 						<?php
 							wp_nav_menu(

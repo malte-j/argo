@@ -54,10 +54,16 @@
 		padding: 2rem;
 		position: relative;
 		margin: 1rem;
-  
+    cursor: pointer;
+
+    a {
+      color: #000;
+      text-decoration: none;
+    }
+
     // hover animation
     &::after {
-			transition: transform .3s ease-out, color .25s ease-out;
+			transition: transform .1s ease-out, color .25s ease-out;
 			content: "";
 			position: absolute;
 			background: #000;
@@ -66,20 +72,70 @@
 			left: 0;
 			top: 0;
 			z-index: -1;
-			transform: scaleX(0);
-			transform-origin: 0% 50%;
+			transform: scale(0);
+			transform-origin: 50% 50%;
 		}
 		&:hover a{
 			color: white;
 		}
 		&:hover::after {
-			transform: scaleX(1);			
+			transform: scale(1);			
 		}
 	}
-	
+  
+  button {
+    // positioning
+    height: 25px;
+    width: 25px;
+    position: relative;
+
+    // appearance
+    cursor: pointer;
+    font-size: 0;
+    background: none;
+    border: none;
+    border-radius: 0;
+    border-top: 5px solid #000;
+    border-bottom: 5px solid #000;
+
+    // middle bar
+    &::after, &::before {
+      content: "";
+      
+      // positioning
+      height: 5px;
+      width: 90%;
+      position: absolute;
+      top: calc(50% - 2px);
+      left: 0;
+
+      // appearance
+      background: black;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
 	&.open {
+
+    // show navigation menu
 		ul {
 			display: flex;
-		}
+    }
+    
+    // show close button
+    button {
+      border: none;
+
+      &::before {
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        transform: rotate(-45deg);
+      }
+    }
 	}
 }

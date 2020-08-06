@@ -1,3 +1,13 @@
+body {
+	font-family: "Space Mono";
+	font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: Inter;
+	font-weight: bold;
+}
+
 .main-header {
 	position: fixed;
 	top: 0;
@@ -46,10 +56,16 @@
 	padding: 2rem;
 	position: relative;
 	margin: 1rem;
+	cursor: pointer;
+}
+
+.main-header li a {
+	color: #000;
+	text-decoration: none;
 }
 
 .main-header li::after {
-	transition: transform .3s ease-out, color .25s ease-out;
+	transition: transform .1s ease-out, color .25s ease-out;
 	content: "";
 	position: absolute;
 	background: #000;
@@ -58,8 +74,8 @@
 	left: 0;
 	top: 0;
 	z-index: -1;
-	transform: scaleX(0);
-	transform-origin: 0% 50%;
+	transform: scale(0);
+	transform-origin: 50% 50%;
 }
 
 .main-header li:hover a {
@@ -67,11 +83,50 @@
 }
 
 .main-header li:hover::after {
-	transform: scaleX(1);
+	transform: scale(1);
+}
+
+.main-header button {
+	height: 25px;
+	width: 25px;
+	position: relative;
+	cursor: pointer;
+	font-size: 0;
+	background: none;
+	border: none;
+	border-radius: 0;
+	border-top: 5px solid #000;
+	border-bottom: 5px solid #000;
+}
+
+.main-header button::after, .main-header button::before {
+	content: "";
+	height: 5px;
+	width: 90%;
+	position: absolute;
+	top: calc(50% - 2px);
+	left: 0;
+	background: black;
+}
+
+.main-header button:focus {
+	outline: none;
 }
 
 .main-header.open ul {
 	display: flex;
+}
+
+.main-header.open button {
+	border: none;
+}
+
+.main-header.open button::before {
+	transform: rotate(45deg);
+}
+
+.main-header.open button::after {
+	transform: rotate(-45deg);
 }
 
 /*# sourceMappingURL=main-style.css.map */
