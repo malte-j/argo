@@ -44,6 +44,7 @@ h1, h2, h3, h4, h5, h6 {
 	height: calc(100% - 80px);
 	width: 100%;
 	bottom: 0;
+	padding: 0;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -133,6 +134,25 @@ h1, h2, h3, h4, h5, h6 {
 .main-header.open button::after {
 	width: 100%;
 	transform: rotate(-45deg);
+}
+
+body.admin-bar {
+	--wp-bar-height: 32px;
+}
+
+body.admin-bar .main-header {
+	position: sticky;
+	top: var(--wp-bar-height);
+}
+
+body.admin-bar .main-header ul {
+	height: calc(100% - 80px - var(--wp-bar-height));
+}
+
+@media (max-width: 782px) {
+	body.admin-bar .main-header {
+		--wp-bar-height: 46px;
+	}
 }
 
 /*# sourceMappingURL=main-style.css.map */

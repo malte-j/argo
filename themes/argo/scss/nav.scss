@@ -1,10 +1,12 @@
+$navbar-height: 80px;
+
 .main-header {
 
   // positioning
 	position: fixed;
 	top: 0;
 	right: 0;
-	height: 80px;
+	height: $navbar-height;
   width: 100%;
 	padding: 24px;
   
@@ -35,9 +37,10 @@
 		left: 0;
   	margin: 0;
 		position: fixed;
-		height: calc(100% - 80px);
+		height: calc(100% - #{$navbar-height} );
 		width: 100%;
-		bottom: 0;
+    bottom: 0;
+    padding: 0;
 	  
     //inner layout
     display: flex;
@@ -148,4 +151,21 @@
       }
     }
 	}
+}
+
+// fix for wp admin bar overlapping navbar
+body.admin-bar {
+  --wp-bar-height: 32px;
+  .main-header {
+    position: sticky;
+    top: var(--wp-bar-height);
+    ul {
+      height: calc(100% - #{$navbar-height} - var(--wp-bar-height));
+    }
+
+    @media (max-width: 782px) {
+      --wp-bar-height: 46px;
+
+    }
+  }
 }
