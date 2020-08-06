@@ -96,4 +96,8 @@
 			menuItem.classList.toggle( 'focus' );
 		}
 	}
-}() );
+} );
+
+document.querySelector(".main-header").addEventListener('click', e => {
+	e.path[2].classList.toggle("open");
+})

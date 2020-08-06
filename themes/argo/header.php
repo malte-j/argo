@@ -62,19 +62,23 @@
 
 */ ?>
 
-			<header>
-				<?php require get_template_directory() . '/media/logo.svg.php'; ?>
-				<nav>
-				<?php
-					wp_nav_menu(
-						array(
-							'theme_location' => 'menu-1',
-							'menu_id'        => 'primary-menu',
-						)
-					);
-					?>
+			<header class="main-header">
+				<div class="inner">
+					<?php require get_template_directory() . '/media/logo.svg.php'; ?>
+					
+					<nav>
+						<?php
+							wp_nav_menu(
+								array(
+									'theme_location' => 'menu-1',
+									'menu_id'        => 'primary-menu',
+								)
+							);
+							?>
+					</nav>
 
-				</nav>
+					<button>Menü öffnen / schließen</button>
+				</div>
 			</header>
 
 	

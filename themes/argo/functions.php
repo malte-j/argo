@@ -144,6 +144,8 @@ add_action( 'widgets_init', 'argo_widgets_init' );
  */
 function argo_scripts() {
 	wp_enqueue_style( 'argo-style', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_enqueue_style('main-styles', get_template_directory_uri() . '/css/main-style.css', array(), filemtime(get_template_directory() . '/css/main-style.css'), false);
+
 	wp_style_add_data( 'argo-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'argo-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );

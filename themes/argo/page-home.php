@@ -9,4 +9,5 @@ cool.
 <?php the_header_image_tag(); ?>
 <p style="color: <?php the_field('services'); ?>"></p>
 
- 
+<?php get_footer(); ?>
+
