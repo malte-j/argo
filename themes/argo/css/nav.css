@@ -16,7 +16,7 @@
 	background: #ffffffcc;
 	z-index: -1;
 	position: absolute;
-	backdrop-filter: blur(6px);
+	backdrop-filter: blur(10px);
 }
 
 .main-header .inner {
@@ -34,11 +34,13 @@
 	height: calc(100% - 80px);
 	width: 100%;
 	bottom: 0;
-	display: none;
+	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	background: #ffffff;
+	transition: transform .4s ease-out;
+	transform: translateX(100%);
 }
 
 .main-header li {
@@ -97,6 +99,7 @@
 	top: calc(50% - 2px);
 	left: 0;
 	background: black;
+	transition: transform .3s ease;
 }
 
 .main-header button:focus {
@@ -104,7 +107,7 @@
 }
 
 .main-header.open ul {
-	display: flex;
+	transform: translate(0%, 0%);
 }
 
 .main-header.open button {
@@ -113,9 +116,11 @@
 
 .main-header.open button::before {
 	transform: rotate(45deg);
+	width: 100%;
 }
 
 .main-header.open button::after {
+	width: 100%;
 	transform: rotate(-45deg);
 }
 
