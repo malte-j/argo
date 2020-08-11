@@ -84,7 +84,7 @@
 
 	
 <?php
-if(is_page(home))
+if(is_front_page())
 {
 // echo 'yes';
 }
