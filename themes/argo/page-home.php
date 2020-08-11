@@ -6,11 +6,12 @@ get_header();
   <?php the_header_image_tag(); ?>
 </header>
 
+
+<main>
 <h1>Testimonials</h1>
 
 
 <?php 
-
   // Check rows exists.
   if( have_rows('testimonials') ):
 
@@ -31,7 +32,7 @@ get_header();
   endif;
 
 ?>
-<p style="color: <?php the_field('services'); ?>"></p>
+</main>
 
 <?php get_footer(); ?>
 

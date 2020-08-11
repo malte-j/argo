@@ -9,4 +9,15 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
 }
 
-@import "./nav.scss"
+
+.landing--header {
+	height: 100vh;
+	display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+	align-items: center;
+}
+
+
+@import "./nav.scss";
+@import "./typography.scss";

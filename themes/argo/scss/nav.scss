@@ -1,14 +1,17 @@
 $navbar-height: 80px;
+$transition-duration: .3s;
 
 .main-header {
-
   // positioning
 	position: fixed;
 	top: 0;
 	right: 0;
 	height: $navbar-height;
   width: 100%;
-	padding: 24px;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  overflow: hidden;
   
   // workaround for backdrop-filter bug
 	&::after {
@@ -20,17 +23,26 @@ $navbar-height: 80px;
 		background: #ffffffcc;
 		z-index: -1;
 		position: absolute;
-		backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    
+    // animate when opened
+    transition: background-color $transition-duration ease-out;
   }
   
   // limits width of header
 	.inner {
-		max-width: 700px;
+    max-width: 800px;
+    width: 100%;
 		margin: 0 auto;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;	
-	}
+  }
+  
+  // prevent bottom padding
+  svg {
+    display: block;
+  }
   
 	ul {
     // positioning
@@ -46,20 +58,20 @@ $navbar-height: 80px;
     display: flex;
 		flex-direction: column;
 		align-items: center;
-		justify-content: center;
+		justify-content: space-evenly;
     
     // style
     background: #ffffff;
 
     // animation
-    transition: transform .4s ease-out;
+    transition: transform $transition-duration ease;
     transform: translateX(100%);
 	}
 	
 	li {
 		list-style: none;
 		position: relative;
-		margin: 1rem;
+		// margin: 1rem;
     cursor: pointer;
 
     a {
@@ -106,7 +118,7 @@ $navbar-height: 80px;
     border-top: 5px solid #000;
     border-bottom: 5px solid #000;
 
-    // middle bar
+    // middle bar and close button
     &::after, &::before {
       content: "";
       
@@ -121,7 +133,7 @@ $navbar-height: 80px;
       background: black;
 
       // animation
-      transition: transform .3s ease;
+      transition: transform $transition-duration ease;
     }
 
     &:focus {
@@ -135,7 +147,11 @@ $navbar-height: 80px;
 		ul {
       transform: translate(0%, 0%);
     }
-    
+  
+    &::after {
+      // make the background of the header fill the whole vertical height
+      background-color: #ffffff;      
+    }
 
     // show close button
     button {
@@ -154,19 +170,78 @@ $navbar-height: 80px;
 	}
 }
 
+// desktop verion
+@media (min-width: 700px) {
+  .main-header {
+
+    // position blurry background to allow anchor underline to fit
+    &::after {
+      z-index: -2;
+    }
+
+    // disable hamburger
+    button {
+      display: none;
+    }
+
+    // position navigation back in header.
+    ul {
+      flex-direction: row;
+      position: relative;
+      transform: none;
+      display: flex;
+      background: none;
+
+      // remove background
+      &::after {
+        content: none;
+      }
+    }
+
+    li {
+      // fit links in header
+      margin: 0;
+      margin-left: 1.8rem;
+  
+      a {
+        padding: 0;
+      }
+      
+      // animation on hover
+      &:hover a {
+        color: #000000;
+      }
+
+      &::after {
+        height: 1px;
+        top: 100%;
+        bottom: 0;
+        z-index: -1;
+      }
+    }
+  }
+}
+
 // fix for wp admin bar overlapping navbar
 body.admin-bar {
   --wp-bar-height: 32px;
+  
   .main-header {
     position: sticky;
     top: var(--wp-bar-height);
+
+    // height of navigation menu = full height - height of logo header - height of wp adminbar
     ul {
       height: calc(100% - #{$navbar-height} - var(--wp-bar-height));
     }
 
     @media (max-width: 782px) {
       --wp-bar-height: 46px;
-
     }
+  }
+
+  #wpadminbar {
+    // fix header again, otherwise it will unstick at 600px 
+    position: fixed;
   }
 }
