@@ -7,9 +7,9 @@
 	display: flex;
 	align-items: center;
 	padding: 0 24px;
-	overflow: hidden;
 }
 
+s
 .main-header::after {
 	content: "";
 	top: 0;
