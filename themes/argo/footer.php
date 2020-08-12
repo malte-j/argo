@@ -13,6 +13,15 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
+		<?php
+							wp_nav_menu(
+								array(
+									'theme_location' => 'menu-2',
+									'menu_id'        => 'footer',
+									'container'			 => false,
+								)
+							);
+			?>
 			&copy 2020 Spacifik
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->

@@ -19,5 +19,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+footer {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 3rem;
+  a:not([href]) {
+    color: black;
+  }
+}
+
 @import "./nav.scss";
 @import "./typography.scss";
