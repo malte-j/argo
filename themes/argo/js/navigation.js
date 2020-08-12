@@ -100,5 +100,5 @@
 // } );
 
 document.querySelector(".main-header").addEventListener('click', e => {
-	e.path[2].classList.toggle("open");
+	e.composedPath()[2].classList.toggle("open");
 })
