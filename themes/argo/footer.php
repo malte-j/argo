@@ -21,7 +21,9 @@
 								)
 							);
 			?>
-			&copy 2020 Spacifik
+			<p>
+				&copy 2020 Spacifik
+			</p>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
