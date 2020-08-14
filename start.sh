@@ -1,1 +1,2 @@
-docker-compose up 
+docker-compose up -d
+(cd ./themes/argo/ && npm run watch)

@@ -27,11 +27,7 @@ get_header();
           // echo $sub_value['profilbild']."<br>";
           echo "<br>";
           echo "<br>";
-
           
-          // Do something...
-
-      // End loop.
       endwhile;
 
   // No value.
