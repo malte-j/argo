@@ -189,5 +189,5 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  * Advanced Custom Fields Fields
  */
 
-// require get_template_directory() . '/inc/acf-fields.php';
+require get_template_directory() . '/inc/acf-fields.php';
  
