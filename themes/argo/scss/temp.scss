@@ -22,12 +22,16 @@
 
   }
   div {
-    min-width: 60%;
+    min-width: 70%;
+    // height: 400px;
     scroll-snap-align: center;background: #fff;
     border-radius: 8px;
     padding: 22px;
     box-shadow: 0px 4px 11px #646f9336;
     margin: 26px;
     word-break: break-word;
+ }
+ it {
+   font-style: italic;
  }
 } 

@@ -3,7 +3,7 @@ $transition-duration: .3s;
 
 .main-header {
   // positioning
-	position: fixed;
+	position: sticky;
 	top: 0;
 	right: 0;
 	height: $navbar-height;
@@ -12,6 +12,7 @@ $transition-duration: .3s;
   align-items: center;
   padding: 0 24px;
   overflow-x: hidden;
+  z-index: 100;
   
   // workaround for backdrop-filter bug
 	&::after {

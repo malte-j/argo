@@ -24,9 +24,9 @@ get_header();
 
           // Load sub field value.
           $sub_value = get_sub_field('testimonial');
-          echo $sub_value['name']."<br>";
+          echo "<it>".$sub_value['name']."</it><br>";
           echo $sub_value['text']."<br>";
-          echo $sub_value['linkedin_link']."<br>";
+          echo "<a href='".$sub_value['linkedin_link']."'>linkedin</a>";
           // echo $sub_value['profilbild']."<br>";
           echo "</div>";
           
