@@ -10,6 +10,7 @@ get_header();
 <main>
 <h1>Testimonials</h1>
 
+<div class="testimonials">
 
 <?php 
   // Check rows exists.
@@ -19,14 +20,16 @@ get_header();
       // Loop through rows.
       while( have_rows('testimonials') ) : the_row();
 
+          echo "<div>";
+
           // Load sub field value.
           $sub_value = get_sub_field('testimonial');
           echo $sub_value['name']."<br>";
           echo $sub_value['text']."<br>";
           echo $sub_value['linkedin_link']."<br>";
           // echo $sub_value['profilbild']."<br>";
-          echo "<br>";
-          echo "<br>";
+          echo "</div>";
+          
           
       endwhile;
 
@@ -36,6 +39,7 @@ get_header();
   endif;
 
 ?>
+</div>
 </main>
 
 <?php get_footer(); ?>

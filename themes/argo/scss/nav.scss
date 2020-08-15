@@ -11,6 +11,7 @@ $transition-duration: .3s;
   display: flex;
   align-items: center;
   padding: 0 24px;
+  overflow-x: hidden;
   
   // workaround for backdrop-filter bug
 	&::after {
