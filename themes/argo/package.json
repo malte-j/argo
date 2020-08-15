@@ -37,7 +37,7 @@
   },
   "scripts": {
     "watch": "node-sass scss/main-style.scss -o ./css --source-map true --output-style expanded --indent-type tab --indent-width 1 -w",
-    "compile:css": "node-sass scss/main-style.scss -o ./css/main-style.css --output-style compressed",
+    "compile:css": "node-sass scss/main-style.scss -o ./css/ --output-style compressed",
     "compile:rtl": "rtlcss style.css style-rtl.css",
     "lint:scss": "wp-scripts lint-style 'sass/**/*.scss'",
     "lint:js": "wp-scripts lint-js 'js/*.js'",
