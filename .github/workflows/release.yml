@@ -55,7 +55,7 @@ jobs:
       - name: Sync with wp-cli
         uses: garygrossgarten/github-action-ssh@v0.5.0
         with:
-          command: /usr/home/${{ secrets.USER }}/deploy.sh
+          command: /usr/home/${{ secrets.USERNAME }}/deploy.sh
           host: ${{ secrets.HOST }}
           port: ${{ secrets.PORT }}
           username: ${{ secrets.USERNAME }}
