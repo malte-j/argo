@@ -4,8 +4,10 @@ name: Build and Release
 # events but only for the master branch
 on:
   push:
-    tags: 
-      - "v*"
+    branches:
+      - master
+    # tags: 
+    #   - "v*"
 
 jobs:
   # Bundle theme files into argo.zip
@@ -50,11 +52,19 @@ jobs:
     runs-on: ubuntu-latest
     needs: [release]
     steps:
-      - name: Sync with wp-cli
-        uses: garygrossgarten/github-action-ssh@v0.5.0
+      # - name: Sync with wp-cli
+      #   uses: garygrossgarten/github-action-ssh@v0.5.0
+      #   with:
+      #     command: wp theme install https://github.com/skyguardian42/argo/releases/latest/download/argo.zip --activate --force
+      #     host: ${{ secrets.HOST }}
+      #     port: ${{ secrets.PORT }}
+      #     username: ${{ secrets.USERNAME }}
+      #     password: ${{ secrets.PASSWORD }}
+      - name: executing remote ssh commands using password
+        uses: appleboy/ssh-action@master
         with:
-          command: wp theme install https://github.com/skyguardian42/argo/releases/latest/download/argo.zip --activate --force
           host: ${{ secrets.HOST }}
-          port: ${{ secrets.PORT }}
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
+          script: wp theme install https://github.com/skyguardian42/argo/releases/latest/download/argo.zip --activate --force
