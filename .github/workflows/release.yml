@@ -56,5 +56,5 @@ jobs:
           command: wp theme install https://github.com/skyguardian42/argo/releases/latest/download/argo.zip --activate --force
           host: ${{ secrets.HOST }}
           port: ${{ secrets.PORT }}
-          username: ${{ secrets.USER }}
+          username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
