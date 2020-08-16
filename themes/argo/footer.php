@@ -22,7 +22,7 @@
 							);
 			?>
 			<p>
-				&copy 2020 Spacifik
+				&copy 2020 Spacifik (haftungsbeschränkt)
 			</p>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
