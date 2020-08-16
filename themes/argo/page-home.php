@@ -8,7 +8,7 @@ get_header();
 
 
 <main>
-<h1>Testimonials</h1>
+<h1>Reviews</h1>
 
 <div class="testimonials">
 
