@@ -1,46 +1,53 @@
 <?php
 get_header();
 ?>
-<header class="landing--header"> 
+<header class="landing-header"> 
   <h1><?php the_field('intro_text'); ?></h1>
+  <button>Durchstarten -></button>
   <?php the_header_image_tag(); ?>
 </header>
 
 
 <main>
-<h1>Testimonials</h1>
+
+<?php
+		while ( have_posts() ) :
+			the_post();
+
+			get_template_part( 'template-parts/content-page-home', get_post_type() );
+
+		endwhile; // End of the loop.
+		?>
+
+
+<h2>Testimonials</h2>
 
 <div class="testimonials">
 
-<?php 
-  // Check rows exists.
-  if( have_rows('testimonials') ):
-
-
-      // Loop through rows.
-      while( have_rows('testimonials') ) : the_row();
-
+  <?php 
+    // Check rows exists.
+    if( have_rows('testimonials') ):
+        while( have_rows('testimonials') ) : the_row();
           echo "<div>";
-
           // Load sub field value.
           $sub_value = get_sub_field('testimonial');
-          echo "<it>".$sub_value['name']."</it><br>";
-          echo $sub_value['text']."<br>";
+          echo "<p>".$sub_value['text']."</p>";
+          echo "<p>".$sub_value['name']."</p>";
           echo "<a href='".$sub_value['linkedin_link']."'>linkedin</a>";
-          // echo $sub_value['profilbild']."<br>";
-          echo "</div>";
-          
-          
+          echo $sub_value['profilbild'];
+          echo "</div>";        
       endwhile;
-
-  // No value.
-  else :
-      // Do something...
-  endif;
-
-?>
+    endif;
+  ?>
 </div>
+
+
+
+
 </main>
+<?php
+include get_template_directory() . '/inc/contact-us.php';
+?>
 
 <?php get_footer(); ?>
 

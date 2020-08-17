@@ -1,3 +1,6 @@
+// @import "./trispace-font.scss";
+
+
 body {
   font-family: "Space Mono", monospace;
   font-weight: 400;
@@ -8,17 +11,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Inter", "Helvetica", sans-serif;
   font-weight: bold;
 }
-
-
-.landing--header {
-	height: 100vh;
-	display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-	align-items: center;
-}
  
 @import "./nav.scss";
 @import "./typography.scss";
 @import "./footer.scss";
+@import "./contact-us.scss";
+@import "./header.scss";
 @import "./temp.scss";

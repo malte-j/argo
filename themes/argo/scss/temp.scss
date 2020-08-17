@@ -35,3 +35,14 @@
    font-style: italic;
  }
 } 
+
+
+h2, p {
+  opacity: 1;
+  transform: none;
+  transition: opacity .8s ease, transform .8s ease;
+}
+.scroll-hidden {
+  opacity: 0;
+  transform: translateY(16px);
+}

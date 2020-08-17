@@ -100,5 +100,53 @@
 // } );
 
 document.querySelector(".main-header").addEventListener('click', e => {
-	e.composedPath()[2].classList.toggle("open");
+	e.composedPath()[2].classList.toggle("open"); 
 })
+
+let callback = (entries, observer) => {
+  entries.forEach(entry => {
+		if(entry.isIntersecting) {
+			// console.log("Intersecting: " + entry.target.innerHTML)
+			entry.target.classList.remove('scroll-hidden')
+		} else {
+			// console.log("not intersect: " + entry.target.innerHTML)
+			// entry.target.classList.add('scroll-hidden')
+		}
+  });
+};
+
+let observer = new IntersectionObserver(callback, {
+	// root: document.querySelector('body'),
+  rootMargin: '0px',
+  threshold: 1
+});
+
+document.querySelectorAll('h2').forEach(el=>{
+	el.classList.add('scroll-hidden')
+	observer.observe(el);
+})
+document.querySelectorAll('p').forEach(el=>{
+	el.classList.add('scroll-hidden')
+	observer.observe(el);
+})
+
+
+
+// console.log('%c Oh my heavens! ', 'background: #1c1c1c; color: #ff');
+let b = [
+" __                  _  __ _ _     ",
+" / _\\_ __   __ _  ___(_)/ _(_) | __ ",
+" \\ \\| '_ \\ / _` |/ __| | |_| | |/ / ",
+" _\\ \\ |_) | (_| | (__| |  _| |   <  ",
+" \\__/ .__/ \\__,_|\\___|_|_| |_|_|\\_\\ ",
+"    |_|                             ",
+"                                    ",
+" Spaß an Quellcode und Lust für uns ",
+" zu arbeiten?                       ",
+"                                    ",
+"  --> https://spacifik.de/jobs <--  ",
+"                                    ",
+]
+
+c = b.join("\n")
+console.log('%c ' + c, 'background: #1c1c1c; color: #fff; font-weight: bold');
