@@ -2,3 +2,4 @@ themes/twenty*
 node_modules
 *.zip
 themes/argo/css
+themes/argo/dist
