@@ -30,13 +30,17 @@ footer.site-footer {
 	}
 
 	> ul > li > a {
+		// outline: 1px solid red;
+
 		color: #737373;
 		margin-bottom: $text-gap;
 
-		&:hover {
+		&:hover, &:visited {
 			color: #737373;
 			text-decoration: none;
 		}
+
+
 	}
 
 	#footer > li {

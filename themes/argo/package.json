@@ -19,7 +19,6 @@
   "devDependencies": {
     "@wordpress/scripts": "^9.0.0",
     "dir-archiver": "^1.1.1",
-    "node-sass": "^4.14.0",
     "rtlcss": "^2.5.0"
   },
   "rtlcssConfig": {
@@ -42,6 +41,17 @@
     "lint:scss": "wp-scripts lint-style 'sass/**/*.scss'",
     "lint:js": "wp-scripts lint-js 'js/*.js'",
     "bundle": "dir-archiver --src . --dest ../../argo.zip --exclude .DS_Store .stylelintrc.json .eslintrc .git .gitattributes .github .gitignore README.md composer.json composer.lock node_modules vendor package-lock.json package.json .travis.yml phpcs.xml.dist scss style.css.map",
-    "build": "npm run compile:css && npm run bundle"
+    "build": "npm run compile:css && npm run bundle",
+    "pack": "NODE_ENV=production webpack",
+    "watch-pack": "NODE_ENV=development webpack --watch"
+  },
+  "dependencies": {
+    "css-loader": "^4.2.1",
+    "lottie-web": "^5.7.1",
+    "mini-css-extract-plugin": "^0.10.0",
+    "sass": "^1.26.10",
+    "sass-loader": "^9.0.3",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.44.1"
   }
 }

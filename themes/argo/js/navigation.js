@@ -118,15 +118,19 @@ let callback = (entries, observer) => {
 let observer = new IntersectionObserver(callback, {
 	// root: document.querySelector('body'),
   rootMargin: '0px',
-  threshold: 1
+  threshold: .1
 });
 
-document.querySelectorAll('h2').forEach(el=>{
+document.querySelectorAll('main h2, main p').forEach(el=>{
 	el.classList.add('scroll-hidden')
+	el.classList.add('scroll-hideable')
+
 	observer.observe(el);
 })
-document.querySelectorAll('p').forEach(el=>{
+document.querySelectorAll('[data-slide-in]').forEach(el=>{
 	el.classList.add('scroll-hidden')
+	el.classList.add('scroll-hideable')
+
 	observer.observe(el);
 })
 

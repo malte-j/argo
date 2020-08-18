@@ -9,8 +9,10 @@ get_header();
 
 
 <main>
+<div data-lottie data-animation-path="<?php echo get_template_directory_uri()."/media/illustration.json" ?>" data-anim-loop="true" data-name="illustration"></div>
 
 <?php
+
 		while ( have_posts() ) :
 			the_post();
 
@@ -21,14 +23,16 @@ get_header();
 
 </main>
 
+
+
 <div class="testimonials">
-  <h2>Testimonials</h2>
+  <h2 data-slide-in>Testimonials</h2>
   <div class="scroll">
     <?php 
       // Check rows exists.
       if( have_rows('testimonials') ):
           while( have_rows('testimonials') ) : the_row();
-            echo "<div class='card'>";
+            echo "<div class='card' data-slide-in>";
             // Load sub field value.
               $sub_value = get_sub_field('testimonial');
               echo "<h3>".$sub_value['heading']."</h3>";
