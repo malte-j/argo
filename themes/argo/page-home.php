@@ -19,32 +19,36 @@ get_header();
 		endwhile; // End of the loop.
 		?>
 
-
-<h2>Testimonials</h2>
+</main>
 
 <div class="testimonials">
+  <h2>Testimonials</h2>
+  <div class="scroll">
+    <?php 
+      // Check rows exists.
+      if( have_rows('testimonials') ):
+          while( have_rows('testimonials') ) : the_row();
+            echo "<div class='card'>";
+            // Load sub field value.
+              $sub_value = get_sub_field('testimonial');
+              echo "<h3>".$sub_value['heading']."</h3>";
+              echo "<p>".$sub_value['text']."</p>";
+              echo "<div class='person'>";
+                echo $sub_value['profilbild'];
+                echo "<div>";
+                echo "<p class='name'>".$sub_value['name']."</p>";
+                echo "<p class='company'>".$sub_value['company']."</p>";
+                echo "</div>";
 
-  <?php 
-    // Check rows exists.
-    if( have_rows('testimonials') ):
-        while( have_rows('testimonials') ) : the_row();
-          echo "<div>";
-          // Load sub field value.
-          $sub_value = get_sub_field('testimonial');
-          echo "<p>".$sub_value['text']."</p>";
-          echo "<p>".$sub_value['name']."</p>";
-          echo "<a href='".$sub_value['linkedin_link']."'>linkedin</a>";
-          echo $sub_value['profilbild'];
-          echo "</div>";        
-      endwhile;
-    endif;
-  ?>
+                echo "<a href='".$sub_value['linkedin_link']."' target='_blank' rel='noopener noreferrer'>".file_get_contents(get_template_directory()."/media/linkedin.svg")."</a>";
+              echo "</div>";
+            echo "</div>";        
+        endwhile;
+      endif;
+    ?>
+  </div>
 </div>
 
-
-
-
-</main>
 <?php
 include get_template_directory() . '/inc/contact-us.php';
 ?>
