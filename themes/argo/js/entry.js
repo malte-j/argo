@@ -1,7 +1,7 @@
 import "./navigation.js"
 import "../scss/main-style.scss"
-import lottie from "lottie-web"
-// lottie.searchAnimations()
+import lottie from "lottie-web/build/player/lottie_light"
+
 
 "use strict";
 
@@ -32,8 +32,10 @@ const setPos = () => {
           b = i.el.getBoundingClientRect().height,
           d = window.innerHeight,
           p = clamp(0,(s-d)/(-d-b),1);
-    
-    i.lottie.goToAndStop(i.lottie.getDuration(false) * p * 10, true);
+
+    if (p>0 && p<1) {
+      i.lottie.goToAndStop(i.lottie.getDuration(false) * p * 1000, false);
+    }  
   })
 
   requestAnimationFrame(setPos)
