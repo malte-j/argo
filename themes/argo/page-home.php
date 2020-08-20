@@ -9,7 +9,7 @@ get_header();
 
 
 <main>
-<div data-lottie data-animation-path="<?php echo get_template_directory_uri()."/media/illustration.json" ?>" data-anim-loop="true" data-name="illustration"></div>
+<div data-lottie data-animation-path="<?php echo get_template_directory_uri()."/media/illustration.json" ?>"></div>
 
 <?php
 
