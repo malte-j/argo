@@ -2,6 +2,9 @@
 @import "./old-style.scss";
 @import "./typography.scss";
 
+html, body, #page {
+  height: 100%;
+}
 
 body {
   font-family: "Space Mono", monospace;

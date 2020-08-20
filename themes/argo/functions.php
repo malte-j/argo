@@ -206,4 +206,11 @@ function putInHeader() {
 	}
 }
 
+add_shortcode('lottie-element', 'lottie_element_function');
+function lottie_element_function($atts = array()) {
+	$a = shortcode_atts( array(
+		'file' => 'illustration'
+ ), $atts );
 
+	return '<div data-lottie data-animation-path="'.get_template_directory_uri().'/media/'.$a['file'].'.json"></div>';
+}

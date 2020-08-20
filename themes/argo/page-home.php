@@ -1,37 +1,22 @@
 <?php
 get_header();
 ?>
+
 <header class="landing-header"> 
   <h1><?php the_field('intro_text'); ?></h1>
   <button>Durchstarten -></button>
   <?php the_header_image_tag(); ?>
 </header>
-
-
 <main>
 
-<?php 
-  // add_action ( 'wp_head', 'putInHeader' );
-  // function putInHeader() {
-  //   echo "<meta name='description' content='Free Web tutorials'>";
-  // }
-
-?>
-<div data-lottie data-animation-path="<?php echo get_template_directory_uri()."/media/illustration.json" ?>"></div>
-
-<?php
-
+  <?php
 		while ( have_posts() ) :
 			the_post();
-
 			get_template_part( 'template-parts/content-page-home', get_post_type() );
-
-		endwhile; // End of the loop.
-		?>
+		endwhile;
+  ?>
 
 </main>
-
-
 
 <div class="testimonials">
   <h2 data-slide-in>Testimonials</h2>

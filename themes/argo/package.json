@@ -18,8 +18,7 @@
   },
   "devDependencies": {
     "@wordpress/scripts": "^9.0.0",
-    "dir-archiver": "^1.1.1",
-    "rtlcss": "^2.5.0"
+    "dir-archiver": "^1.1.1"
   },
   "rtlcssConfig": {
     "options": {
@@ -35,15 +34,10 @@
     "map": false
   },
   "scripts": {
-    "watch": "node-sass scss/main-style.scss -o ./css --source-map true --output-style expanded --indent-type tab --indent-width 1 -w",
-    "compile:css": "node-sass scss/main-style.scss -o ./css/ --output-style compressed",
-    "compile:rtl": "rtlcss style.css style-rtl.css",
-    "lint:scss": "wp-scripts lint-style 'sass/**/*.scss'",
-    "lint:js": "wp-scripts lint-js 'js/*.js'",
-    "bundle": "dir-archiver --src . --dest ../../argo.zip --exclude .DS_Store .stylelintrc.json webpack.config.js .eslintrc .git .gitattributes .github .gitignore README.md composer.json composer.lock node_modules vendor package-lock.json package.json .travis.yml phpcs.xml.dist scss style.css.map",
     "build": "npm run pack && npm run bundle",
+    "bundle": "dir-archiver --src . --dest ../../argo.zip --exclude .DS_Store .stylelintrc.json webpack.config.js .eslintrc .git .gitattributes .github .gitignore README.md composer.json composer.lock node_modules vendor package-lock.json package.json .travis.yml phpcs.xml.dist scss style.css.map",
     "pack": "webpack --mode=production",
-    "watch-pack": "webpack --watch --mode=development"
+    "watch": "webpack --watch --mode=development"
   },
   "dependencies": {
     "css-loader": "^4.2.1",
