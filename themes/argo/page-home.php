@@ -9,6 +9,14 @@ get_header();
 
 
 <main>
+
+<?php 
+  // add_action ( 'wp_head', 'putInHeader' );
+  // function putInHeader() {
+  //   echo "<meta name='description' content='Free Web tutorials'>";
+  // }
+
+?>
 <div data-lottie data-animation-path="<?php echo get_template_directory_uri()."/media/illustration.json" ?>"></div>
 
 <?php

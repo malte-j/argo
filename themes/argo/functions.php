@@ -139,7 +139,7 @@ function argo_widgets_init() {
 		)
 	);
 }
-add_action( 'widgets_init', 'argo_widgets_init' );
+// add_action( 'widgets_init', 'argo_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
@@ -152,9 +152,6 @@ function argo_scripts() {
 
 	wp_enqueue_script( 'argo-bundle', get_template_directory_uri() . '/dist/bundle.js', array(), _S_VERSION, true );
 
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
 }
 add_action( 'wp_enqueue_scripts', 'argo_scripts' );
 
@@ -190,3 +187,23 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  */
 
 require get_template_directory() . '/inc/acf-fields.php';
+
+add_action ( 'wp_head', 'putInHeader' );
+function putInHeader() {
+
+	//preload fonts
+	foreach(glob(get_template_directory().'/fonts/*.woff2') as &$val) {
+		$output_array = array();
+		preg_match('/\/fonts\/.*/', $val, $output_array);
+		echo '<link rel="preload" href="'.get_template_directory_uri().$output_array[0].'" as="font" type="font/woff2" crossorigin>';
+	}
+
+	// preload animations
+	foreach(glob(get_template_directory().'/media/*.json') as &$val) {
+		$output_array = array();
+		preg_match('/\/media\/.*/', $val, $output_array);
+		echo '<link rel="preload" href="'.get_template_directory_uri().$output_array[0].'" as="fetch" crossorigin>';
+	}
+}
+
+
