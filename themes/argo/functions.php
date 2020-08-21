@@ -46,6 +46,8 @@ if ( ! function_exists( 'argo_setup' ) ) :
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
 		add_theme_support( 'post-thumbnails' );
+		add_image_size( 'portfolio-square', 800, 800, true );
+
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
@@ -214,3 +216,5 @@ function lottie_element_function($atts = array()) {
 
 	return '<div data-lottie data-animation-path="'.get_template_directory_uri().'/media/'.$a['file'].'.json"></div>';
 }
+
+remove_filter('template_redirect', 'redirect_canonical');

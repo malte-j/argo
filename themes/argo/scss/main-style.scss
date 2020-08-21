@@ -3,7 +3,7 @@
 @import "./typography.scss";
 
 html, body, #page {
-  height: 100%;
+  height: -webkit-fill-available;
 }
 
 body {

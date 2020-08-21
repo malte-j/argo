@@ -228,7 +228,7 @@ body.admin-bar {
   --wp-bar-height: 32px;
   
   .main-header {
-    position: sticky;
+    position: fixed;
     top: var(--wp-bar-height);
 
     // height of navigation menu = full height - height of logo header - height of wp adminbar
