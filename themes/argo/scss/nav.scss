@@ -3,7 +3,7 @@ $transition-duration: .3s;
 
 .main-header {
   // positioning
-	position: sticky;
+	position: fixed;
 	top: 0;
 	right: 0;
 	height: $navbar-height;

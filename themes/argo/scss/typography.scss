@@ -28,7 +28,10 @@
 main {
   max-width: 880px;
   margin: 0 auto;
-  padding: 0 40px;
+}
+
+body:not(.home) main{
+  padding: 80px 40px 0 40px;
 }
 
 h2 {

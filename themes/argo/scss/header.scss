@@ -1,8 +1,9 @@
 .landing-header {
   // sizing
-  height: calc(100% - 80px);
+  height: 100%;
   max-width: 1300px;
   margin: 0 auto;
+  padding-top: 80px;
   // float: right;
   display: grid;
   grid-template-rows: 1fr 1.6fr;
