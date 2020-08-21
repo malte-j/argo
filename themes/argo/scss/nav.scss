@@ -21,7 +21,7 @@ $transition-duration: .3s;
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background: #ffffffcc;
+		background: rgba(255, 255, 255, 0.8);
 		z-index: -1;
 		position: absolute;
     backdrop-filter: blur(10px);
@@ -172,7 +172,7 @@ $transition-duration: .3s;
 }
 
 // desktop verion
-@media (min-width: 700px) {
+@media (min-width: 700px), (-ms-ime-align:auto) {
   .main-header {
 
     // position blurry background to allow anchor underline to fit
