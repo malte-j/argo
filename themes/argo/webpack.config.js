@@ -15,31 +15,22 @@ module.exports = {
   },
   module: {
     rules: [
-      // { test: /\.(png|woff|woff2|eot|ttf|svg)$/, 
-      //   // loader: 'url-loader?limit=100000'
-      //   loader: 'raw-loader'
-
-      //  },
       {
         test: /\.scss$/i,
-        // test: "./scss/*.scss",
         use: [
           // fallback to style-loader in development
           // process.env.NODE_ENV !== 'production'
           //   ? 'style-loader'
           //   : MiniCssExtractPlugin.loader,
           {
-            // After all CSS loaders we use plugin to do his work.
-            // It gets all transformed CSS and extracts it into separate
-            // single bundled file
             loader: MiniCssExtractPlugin.loader
           }, 
           {
             loader: "css-loader",
             options: { url: false }
           },
+          'postcss-loader',
           {
-            // First we transform SASS to standard CSS
             loader: "sass-loader",
             options: {
               implementation: require("sass")
