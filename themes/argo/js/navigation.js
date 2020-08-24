@@ -98,9 +98,7 @@
 				
 	hamburger.addEventListener('click', e => {
 		nav.classList.toggle("open"); 
-
 		let ariaExpanded = (hamburger.getAttribute( 'aria-expanded' ) === 'true' ? false : true);
 		hamburger.setAttribute( 'aria-expanded', ariaExpanded );
 	})
-
 })()

@@ -201,10 +201,12 @@ function putInHeader() {
 	}
 
 	// preload animations
-	foreach(glob(get_template_directory().'/media/*.json') as &$val) {
-		$output_array = array();
-		preg_match('/\/media\/.*/', $val, $output_array);
-		echo '<link rel="preload" href="'.get_template_directory_uri().$output_array[0].'" as="fetch" crossorigin>';
+	if(is_front_page()) {
+		foreach(glob(get_template_directory().'/media/*.json') as &$val) {
+			$output_array = array();
+			preg_match('/\/media\/.*/', $val, $output_array);
+			echo '<link rel="preload" href="'.get_template_directory_uri().$output_array[0].'" as="fetch" crossorigin>';
+		}
 	}
 }
 

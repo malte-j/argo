@@ -3,28 +3,35 @@
   height: 100%;
   max-width: 1300px;
   margin: 0 auto;
-  padding-top: 80px;
-  // float: right;
+  
+  // grid with space for navigation
   display: grid;
-  grid-template-rows: 1fr 1.6fr;
+  grid-template-rows: 80px 1fr 1.6fr;
+
+  // fix for overflow on ios 12
+  overflow: hidden;
 
   h1 {
     align-self: center;
     font-family: inherit;
     font-weight: 400;
+    grid-row-start:  2;
+    margin: 0;
     padding: 0 40px;
   }
 
   button, img {
-    grid-row-start:  2;
+    grid-row-start:  3;
     grid-column-start: 1;
-
   }
 
   button {
-    cursor: pointer;
+    // to be on top of image
     z-index: 1;
     align-self: end; 
+    
+    // look
+    cursor: pointer;
     margin: 40px;
     border-radius: 6px;
     padding: 20px;
@@ -34,6 +41,7 @@
     font-size: 1.3rem;
     border: 4px solid #000;
     box-shadow: 1px 1px #000, 2px 2px #000, 3px 3px #000, 4px 4px #000, 5px 5px #000, 6px 6px #000; 
+    
     transition: all .2s ease;
 
     &:hover {
@@ -46,38 +54,50 @@
     object-fit: cover;
     object-position: 0% 0%;
     max-height: 100%;
-    // max-width: 600px;
     height: 100%;
     width: 100%;
+    min-height: 0;
     align-self: end;
     justify-self: start;
   }
 
   @media (min-width: 700px) {
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 80px 1fr 1fr;
     grid-template-columns: minmax(0,1.2fr) 1fr;
 
     h1 {
-      grid-row-start:  1;
+      grid-row-start:  2;
       grid-column-start: 1;
       font-size: calc(2rem + .5vw);
       align-self: end;
-
     }
+
     button {
-      grid-row-start:  2;
+      grid-row-start:  3;
       grid-column-start: 1;
       align-self: center;
-      // justify-self: center;
       padding: 20px 40px;
     }
 
     img {
-      grid-row-start:  span 2;
+      grid-row-start: 2;
+      grid-row-end: span 2;
       grid-column-start: 2;
       justify-self: end;
       object-position: 0% 0%;
-      // max-width: 100%;
+    }
+  }
+
+  // fix full height for ios, except below ios 12
+  // there, a bottom bar covers a part of the section
+  // not worth fixing though, the button padding makes
+  // the button still fully visibile
+  @supports (-webkit-touch-callout: none) {
+    height: -webkit-fill-available;
+
+    img { 
+      height: auto;
     }
   }
 }
+
