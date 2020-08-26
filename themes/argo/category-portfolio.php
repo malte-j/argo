@@ -2,14 +2,16 @@
 get_header();
 ?>
 
-<main id="primary" class="site-main">
+<main id="primary" class="site-main site-portfolio">
 
 <?php if ( have_posts() ) : ?>
 
   <header class="page-header">
-    <h1>Portfolio</h1>
+    <h1>Unser Portfolio</h1>
   </header><!-- .page-header -->
 
+  <div class="portfolio">
+  
   <?php
   /* Start the Loop */
   while ( have_posts() ) :
@@ -32,6 +34,8 @@ else :
 
 endif;
 ?>
+
+</div>
 
 </main><!-- #main -->
 

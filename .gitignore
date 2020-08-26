@@ -4,3 +4,4 @@ node_modules
 themes/argo/css
 themes/argo/dist
 plugins/regenerate-thumbnails
+plugins/ewww-image-optimizer
