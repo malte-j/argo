@@ -1,0 +1,18 @@
+.landing-body {
+  max-width: 1200px;
+
+  svg {
+    background-color: rgb(221, 221, 221);
+  }
+
+  @media (min-width: 750px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 500px;
+    align-items: center;
+    gap: 100px;
+    >*:nth-child(3) {
+      grid-row: 3;
+    }
+  }
+}

@@ -7,12 +7,13 @@ get_header();
   <button>Durchstarten -></button>
   <?php the_header_image_tag(); ?>
 </header>
-<main>
+<main class="landing-body">
 
   <?php
 		while ( have_posts() ) :
-			the_post();
-			get_template_part( 'template-parts/content-page-home', get_post_type() );
+      the_post();
+      the_content();
+			// get_template_part( 'template-parts/content-page-home', get_post_type() );
 		endwhile;
   ?>
 

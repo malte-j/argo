@@ -219,4 +219,4 @@ function lottie_element_function($atts = array()) {
 	return '<div data-lottie data-animation-path="'.get_template_directory_uri().'/media/'.$a['file'].'.json"></div>';
 }
 
-remove_filter('template_redirect', 'redirect_canonical');
+add_filter('the_seo_framework_indicator', '__return_false');

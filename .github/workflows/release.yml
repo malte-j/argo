@@ -20,7 +20,7 @@ jobs:
       - uses: actions/setup-node@v2-beta
         with:
           node-version: '12'
-      - run: (cd themes/argo && npm install)
+      - run: (cd themes/argo && npm ci --production)
       - run: (cd themes/argo && npm run build) 
 
       - name: Save theme file as artifact
