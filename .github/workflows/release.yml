@@ -24,7 +24,7 @@ jobs:
       - uses: actions/cache@v2
         with:
           path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-node-${{ hashFiles('themes/argo/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-    
       - run: (cd themes/argo && npm ci --production)
