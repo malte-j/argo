@@ -9,10 +9,12 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 500px;
+    grid-auto-flow: dense;
     align-items: center;
     gap: 100px;
-    >*:nth-child(3) {
-      grid-row: 3;
+
+    >*:nth-child(3), >*:nth-child(7) {
+      grid-column: 2; 
     }
   }
 }
