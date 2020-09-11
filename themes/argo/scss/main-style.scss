@@ -2,7 +2,7 @@
 @import "./old-style.scss";
 @import "./typography.scss";
 
-html, body, #page {
+html, body.home, #page {
   height: -webkit-fill-available;
 }
 
@@ -25,3 +25,5 @@ h1, h2, h3, h4, h5, h6 {
 @import "./testimonials.scss";
 @import "./temp.scss";
 @import "./portfolio.scss";
+@import "./contact-form.scss";
+
