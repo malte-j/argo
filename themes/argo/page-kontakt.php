@@ -6,7 +6,7 @@ get_header();
     <h1>Jetzt mit uns durchstarten:</h1>
   </header>
 
-  <form action="https://receive-forms.glitch.me/api/upload" method="post" class="contact-form">
+  <form action="https://rc2tbozyi3.execute-api.eu-central-1.amazonaws.com/default/contactFormSlackbot" method="post" class="contact-form">
 		<p class="label">Art des Projekts</p>
 		<div class="select-column">
 			<div class="option">
@@ -53,10 +53,12 @@ get_header();
 			</div>
 		</div>
 		
+		<label for="company" class="label">Ihre Firma</label>
+		<input type="text" name="company" id="company" required placeholder="Musterfirma GmbH">
+		
 		
 		<label for="name" class="label">Ihr Name</label>
 		<input type="text" name="name" id="name" required placeholder="Max Mustermann">
-				
 				
 		<label for="phonenumber" class="label">Ihre Telefonnummer</label>
 		<input type="tel" name="phonenumber" id="phonenumber" placeholder="+49151701723">

@@ -37,13 +37,12 @@
 
       // title
       h3 {
-        font-size: 1.5rem;
         position: relative;
 
         &::before {
           content: "\“";
           position: absolute;
-          left: -.7rem;
+          left: -.6ch;
           top: 0;
 
         }
@@ -59,7 +58,7 @@
       
       // text
       >p {
-        font-size: 0.8rem;
+        // font-size: 0.8rem;
       }
 
       a, svg {

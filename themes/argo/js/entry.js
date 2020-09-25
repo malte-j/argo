@@ -1,5 +1,6 @@
 import "./navigation"
 import "./lottie-animations"
 import "./scroll-fade-in"
+import "./contact-form"
 import "./console-easteregg"
 import "../scss/main-style.scss"
