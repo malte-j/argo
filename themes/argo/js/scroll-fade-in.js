@@ -17,7 +17,7 @@ let observer = new IntersectionObserver(callback, {
 });
 
 
-document.querySelectorAll('main h2, main p, [data-slide-in]').forEach(el=>{
+document.querySelectorAll('main h1, main p, [data-slide-in]').forEach(el=>{
 	el.classList.add('scroll-hidden')
 	el.classList.add('scroll-hideable')
 

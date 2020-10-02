@@ -24,7 +24,7 @@
     "bundle": "dir-archiver --src . --dest ../../argo.zip --exclude .DS_Store .stylelintrc.json webpack.config.js .eslintrc .git .gitattributes .github .gitignore README.md composer.json composer.lock node_modules vendor package-lock.json package.json .travis.yml phpcs.xml.dist scss style.css.map",
     "pack": "webpack --mode=production",
     "watch": "webpack --watch --mode=development & npm run serve",
-    "serve": "browser-sync start --proxy \"$(hostname).local:8000\" --files 'dist' '*.php' --no-notify"
+    "serve": "browser-sync start --proxy \"$(hostname).local:8000\" --files 'dist' '**/*.php' --no-notify"
   },
   "dependencies": {
     "autoprefixer": "^9.8.6",

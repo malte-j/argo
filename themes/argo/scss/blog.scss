@@ -1,0 +1,41 @@
+// body.category-blog {
+// }
+
+.blog-preview {
+  position: relative;
+
+  img {
+    display: block;
+  }
+
+  .title {
+    border: 1px solid black;
+    width: 85%;
+    transform: translateY(-2.5rem);
+    background: white;
+    float: right;
+    margin-right: 5%;
+    padding: 1rem;
+    max-width: 25rem;
+
+    h3 {
+      margin:0;
+      word-break: break-word;
+      hyphens: auto;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    @media (min-width: 800px) {
+      position: absolute;
+      transform: none;
+      margin: 0;
+      bottom: 1rem;
+      right: 1rem;
+
+
+    }
+  }
+}

@@ -71,9 +71,17 @@ get_header();
 			
 		<input type="submit" value="Abschicken">
 
-	</div>
-	
   </form>
+	<div class="class">
+			<?php
+					while ( have_posts() ) :
+						the_post();
+						the_content();
+					endwhile;
+			?>
+		
+		</div>	
+
 </main>
 
 <?php get_footer(); ?>
