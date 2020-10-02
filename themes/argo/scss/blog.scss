@@ -1,11 +1,18 @@
-// body.category-blog {
-// }
+body.single-post main {
+  font-family: "Inter", sans-serif;
+  p {
+    font-size: 18px;
+  }
+}
 
 .blog-preview {
-  position: relative;
 
   img {
     display: block;
+  }
+
+  .thumbnail {
+    border: 1px solid black;
   }
 
   .title {
@@ -13,7 +20,8 @@
     width: 85%;
     transform: translateY(-2.5rem);
     background: white;
-    float: right;
+    // float: right;
+    margin-left: auto;
     margin-right: 5%;
     padding: 1rem;
     max-width: 25rem;
@@ -28,14 +36,19 @@
       text-decoration: none;
     }
 
-    @media (min-width: 800px) {
-      position: absolute;
-      transform: none;
-      margin: 0;
-      bottom: 1rem;
-      right: 1rem;
-
-
-    }
   }
+      @media (min-width: 800px) {
+       margin-bottom: 5rem;
+       position: relative;
+
+        .title {
+        position: absolute;
+        transform: none;
+        margin: 0;
+        bottom: 1rem;
+        right: 1rem;
+
+       }
+  
+      }
 }
