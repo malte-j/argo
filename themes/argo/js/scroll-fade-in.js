@@ -13,11 +13,11 @@ let callback = (entries, observer) => {
 let observer = new IntersectionObserver(callback, {
 	// root: document.querySelector('body'),
   rootMargin: '0px',
-  threshold: .1
+  threshold: .2
 });
 
 
-document.querySelectorAll('main h1, main p, [data-slide-in]').forEach(el=>{
+document.querySelectorAll('.landing-body h1, .landing-body p, .page-team figure,[data-slide-in]').forEach(el=>{
 	el.classList.add('scroll-hidden')
 	el.classList.add('scroll-hideable')
 

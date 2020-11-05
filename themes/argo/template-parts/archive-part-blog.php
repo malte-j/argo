@@ -9,7 +9,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class("blog-preview"); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class("blog-preview");?> data-slide-in >
 	<header class="entry-header">
 		<div class="thumbnail">
 			<?php argo_post_thumbnail(); ?>
