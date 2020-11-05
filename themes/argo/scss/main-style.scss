@@ -1,26 +1,24 @@
-// @import "./trispace-font.scss";
 @import "./old-style.scss";
-@import "./typography.scss";
 
+// General CSS
 html, body.home, body.home #page {
   height: -webkit-fill-available;
 }
 
-body {
-  font-family: "Space Mono", monospace;
-  font-weight: 400;
-}
+@import "./general/typography.scss";
+@import "./general/scrollbar.scss";
+@import "./scroll-effects.scss";
 
+// Components
+@import "./components/main-header.scss";
+@import "./components/footer.scss";
+@import "./components/landing-header.scss";
+@import "./components/landing-body.scss";
+@import "./components/testimonials.scss";
+@import "./components/contact-us.scss";
 
- 
-@import "./main-header.scss";
-@import "./footer.scss";
-@import "./contact-us.scss";
-@import "./blog.scss";
-@import "./landing-header.scss";
-@import "./landing-body.scss";
-@import "./testimonials.scss";
-@import "./temp.scss";
-@import "./portfolio.scss";
-@import "./contact-form.scss";
-@import "./scrollbar.scss"
+// Pages
+@import "./pages/portfolio.scss";
+@import "./pages/contact-form.scss";
+@import "./pages/blog.scss";
+@import "./pages/team.scss"

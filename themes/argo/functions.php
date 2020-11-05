@@ -177,6 +177,13 @@ require get_template_directory() . '/inc/template-functions.php';
  */
 require get_template_directory() . '/inc/customizer.php';
 
+
+/**
+ * Remove emoji.
+ */
+require get_template_directory() . '/inc/remove-emoji.php';
+
+
 /**
  * Load Jetpack compatibility file.
  */

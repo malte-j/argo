@@ -18,9 +18,13 @@
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
 			?>
-	</header><!-- .entry-header -->
+		
+		<?php argo_post_thumbnail(); ?>
+	</header>
 
-	<?php argo_post_thumbnail(); ?>
+	<div class="tags">
+		<?php the_tags("", "")?>
+	</div>
 
 	<div class="entry-content">
 		<?php

@@ -3,10 +3,28 @@ body.single-post main {
   p {
     font-size: 18px;
   }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1.5rem 0;
+
+    a {
+      display: block;
+      padding: .2rem .6rem;
+      border-radius: 100rem;
+      border: 1px solid;
+      text-decoration: none;
+
+      &:hover {
+        color: #112952;
+      }
+    }
+  }
 }
 
 .blog-preview {
-
   img {
     display: block;
   }
