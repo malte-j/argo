@@ -22,7 +22,11 @@
 							);
 			?>
 			<p>
-				&copy 2020 Spacifik (haftungsbeschränkt)
+				&copy 2020 Spacifik (haftungsbeschränkt)<br/>
+				Gerichtstr. 19, DE 13347 Berlin <br/>
+				Geschäftsführender Gesellschafter: Luis Rieke<br/>
+				Amtsgericht Berlin-Charlottenburg - HRB 195740 B<br/>
+				USt-ID: DE317616086.
 			</p>
 	</footer><!-- #colophon -->
 </div><!-- #page -->

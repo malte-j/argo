@@ -6,7 +6,7 @@ get_header();
     <h1>Jetzt mit uns durchstarten:</h1>
   </header>
 
-  <form action="https://rc2tbozyi3.execute-api.eu-central-1.amazonaws.com/default/contactFormSlackbot" method="post" class="contact-form">
+  <form action="https://qvlgljtg97.execute-api.eu-central-1.amazonaws.com/main" method="post" class="contact-form">
 		<p class="label">Art des Projekts</p>
 		<div class="select-column">
 			<div class="option">
@@ -64,10 +64,13 @@ get_header();
 		<input type="tel" name="phonenumber" id="phonenumber" placeholder="+49151701723">
 				
 		<label for="email" class="label">Ihre Emailadresse</label>
-		<input type="email" name="email" id="email">
+		<input type="email" name="email" id="email" placeholder="max@example.com">
 				
 		<label for="info" class="label">Weitere Details</label>
 		<textarea name="info" id="info" cols="12" rows="5"></textarea>
+
+		<label for="question" class="label">Was sind 5 + 3?</label>
+		<input type="text" name="question" id="question">
 			
 		<input type="submit" value="Abschicken">
 

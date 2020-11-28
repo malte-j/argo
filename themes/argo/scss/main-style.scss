@@ -3,6 +3,7 @@
 // General CSS
 html, body.home, body.home #page {
   height: -webkit-fill-available;
+  height: 100%;
 }
 
 @import "./general/typography.scss";

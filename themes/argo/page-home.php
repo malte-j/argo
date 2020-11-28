@@ -3,9 +3,11 @@ get_header();
 ?>
 
 <header class="landing-header"> 
-  <h1><?php the_field('intro_text'); ?></h1>
-  <button>Durchstarten -></button>
-  <?php the_header_image_tag(); ?>
+  <div class="info">
+    <h1><?php the_field('intro_text'); ?></h1>
+    <a href="/kontakt" class="button">Durchstarten</a>
+  </div>
+  <div class="illustration" data-lottie data-animation-path="/wp-content/themes/argo/media/digitalstrategy.json"></div>
 </header>
 <main class="landing-body">
 
