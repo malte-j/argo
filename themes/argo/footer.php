@@ -34,7 +34,11 @@
 			);
 			?>
 			
-			<p>&copy 2020 Spacifik UG (haftungsbeschränkt)</p>
+			<p>&copy 2018-<span class="dateInsert">TODAY</span> Spacifik UG (haftungsbeschränkt)</p>
+			<script>
+				const dateIns = document.querySelector(".dateInsert");
+				dateIns.textContent = (new Date()).getFullYear();
+			</script>
 	</footer>
 </div>
 
