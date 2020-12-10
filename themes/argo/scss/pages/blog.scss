@@ -4,6 +4,10 @@ body.single-post main {
     font-size: 18px;
   }
 
+  h2:not(:first-child) {
+    margin-top: 4rem;
+  }
+
   .tags {
     display: flex;
     flex-wrap: wrap;
