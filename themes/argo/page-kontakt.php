@@ -67,7 +67,7 @@ get_header();
 		<input type="email" name="email" id="email" placeholder="max@example.com">
 				
 		<label for="info" class="label">Weitere Details</label>
-		<textarea name="info" id="info" cols="12" rows="5"></textarea>
+		<textarea name="info" id="info" cols="12" rows="5" placeholder="Außerdem..."></textarea>
 
 		<label for="question" class="label">Was sind 5 + 3?</label>
 		<input type="text" name="question" id="question">

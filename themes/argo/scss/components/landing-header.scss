@@ -5,69 +5,80 @@ $navbar-height: 80px;
   // sizing
   height: 100%;
 
+  padding-top: 80px;
   display: flex;
+  flex-direction: column;
   position: relative;
   overflow: hidden;
 
   h1 {
-    font-family: inherit;
+    font-family: "Space Mono";
     font-weight: 400;
-    margin: 0;
-    padding: 1rem;
     text-align: center;
-    font-size: 3rem;
-    background: rgb(255, 255, 255); 
   }
 
+  .desktop_text {
+    display: none;
+  }
 
   .button {
-    background: rgb(0, 0, 0);
-    font-size: 1.2rem;
+    font-size: calc(1.5rem);
     color: white;
-    padding: 1.3rem 1.6rem;
     text-decoration: none;
-  }
-
-  .illustration {
-    width: 100%;
-    bottom: 0;
-    position: absolute;
+    background: black;
+    padding: 1.1rem 1.3rem;
+    display: block;
+    font-family: "Space Mono";
+    font-weight: 400;
   }
 
   .info {
-    z-index: 1;
+    position: absolute;
     width: 100%;
-    display: grid;
-
-    justify-items: center;
-    align-items: center;
-    
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-
-    padding-top: 80px;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    bottom: 1rem;
+    margin: 0 auto;
   }
 
+  .mobile_text {
+    flex-grow: 1;
+    padding: 0 .5rem;
+  }
 
-  @media screen and (max-aspect-ratio: 9/11){
-    // align-items: flex-end;
+  @media (min-aspect-ratio: 1/1) {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 
-    // .info {
-    //   position: absolute;
-    //   height: 100%;
-    //   width: 100%;
-    //   top :0;
-    //   left: 0;
-    //   justify-content: space-evenly;
-    //   z-index: 1;
-    //   padding-top: $navbar-height;
-    //   // padding-bottom: 1rem;
-    // }
+    .info {
+      width: auto;
+      position: relative;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+    }
+
+    .mobile_text {
+      display: none;
+    }
+
+    .desktop_text {
+      display: block;
+      max-width: 16ch;
+    }
     
-    // .illustration {
-    //   width: 100%;
-    //   padding-bottom: 2rem;
-    // }
+    .img img {
+      max-height: 80vh;
+      object-fit: cover;
+      width: auto;
+    }
+
+    .gap {
+      flex: 0 100 5rem;
+    }
+    
   }
 
   // fix full height for ios, except below ios 12

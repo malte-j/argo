@@ -13,23 +13,30 @@
 
 	<footer id="colophon" class="site-footer">
 		<?php
-							wp_nav_menu(
-								array(
-									'theme_location' => 'menu-2',
-									'menu_id'        => 'footer',
-									'container'			 => false,
-								)
-							);
+			$items_wrap = '<ul id="%1$s" class="%2$s">%3$s';
+			$items_wrap .= "<li>
+				<a>Unsere Daten</a>
+				<ul class=\"sub-menu\">
+					<li>Gerichtstr. 19, DE 13347 Berlin</li>
+					<li>Geschäftsführer: Luis Rieke</li>
+					<li>Berlin-Charlottenburg - HRB 195740 B</li>
+					<li>USt-ID: DE317616086</li>
+				</ul>
+			</li>";
+			$items_wrap .= "</ul>";
+			wp_nav_menu(
+				array(
+					'theme_location' => 'menu-2',
+					'menu_id'        => 'footer',
+					'container'			 => false,
+					'items_wrap' => $items_wrap
+				)
+			);
 			?>
-			<p>
-				&copy 2020 Spacifik (haftungsbeschränkt)<br/>
-				Gerichtstr. 19, DE 13347 Berlin <br/>
-				Geschäftsführender Gesellschafter: Luis Rieke<br/>
-				Amtsgericht Berlin-Charlottenburg - HRB 195740 B<br/>
-				USt-ID: DE317616086.
-			</p>
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+			
+			<p>&copy 2020 Spacifik UG (haftungsbeschränkt)</p>
+	</footer>
+</div>
 
 <?php wp_footer(); ?>
 

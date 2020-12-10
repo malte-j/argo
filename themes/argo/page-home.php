@@ -2,12 +2,16 @@
 get_header();
 ?>
 
-<header class="landing-header"> 
-  <div class="info">
-    <h1><?php the_field('intro_text'); ?></h1>
-    <a href="/kontakt" class="button">Durchstarten</a>
-  </div>
-  <div class="illustration" data-lottie data-animation-path="/wp-content/themes/argo/media/digitalstrategy.json"></div>
+<header class="landing-header">
+    <div class="info">
+      <h1 class="desktop_text"><?php the_field('intro_text'); ?></h1>
+      <a href="/kontakt" class="button">Durchstarten</a>
+    </div>
+    <h1 class="mobile_text"><?php the_field('intro_text'); ?></h1>
+    <div class="gap"></div>
+    <div class="img">
+      <?php echo get_header_image_tag() ?>
+    </div>
 </header>
 <main class="landing-body">
 
