@@ -56,12 +56,11 @@ get_header();
 		<label for="company" class="label">Ihre Firma</label>
 		<input type="text" name="company" id="company" required placeholder="Musterfirma GmbH">
 		
-		
 		<label for="name" class="label">Ihr Name</label>
 		<input type="text" name="name" id="name" required placeholder="Max Mustermann">
 				
 		<label for="phonenumber" class="label">Ihre Telefonnummer</label>
-		<input type="tel" name="phonenumber" id="phonenumber" placeholder="+49151701723">
+		<input type="tel" name="phonenumber" id="phonenumber" placeholder="+49 123456789">
 				
 		<label for="email" class="label">Ihre Emailadresse</label>
 		<input type="email" name="email" id="email" placeholder="max@example.com">
@@ -69,7 +68,7 @@ get_header();
 		<label for="info" class="label">Weitere Details</label>
 		<textarea name="info" id="info" cols="12" rows="5" placeholder="Außerdem..."></textarea>
 
-		<label for="question" class="label">Was sind 5 + 3?</label>
+		<label for="question" class="label">Was ist 5 + 3?</label>
 		<input type="text" name="question" id="question">
 			
 		<input type="submit" value="Abschicken">
