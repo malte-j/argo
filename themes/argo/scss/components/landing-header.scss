@@ -44,7 +44,18 @@ $navbar-height: 80px;
 
   .mobile_text {
     flex-grow: 1;
-    padding: 0 .5rem;
+    margin: 0 .5rem .5rem .5rem;
+  }
+
+  .img {
+    height: 100%;
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 77%;
   }
 
   @media (min-aspect-ratio: 1/1) {
@@ -69,10 +80,11 @@ $navbar-height: 80px;
       max-width: 16ch;
     }
     
-    .img img {
+    img {
       max-height: 80vh;
       object-fit: cover;
       width: auto;
+      
     }
 
     .gap {
@@ -87,6 +99,7 @@ $navbar-height: 80px;
   // the button still fully visibile
   @supports (-webkit-touch-callout: none) {
     height: -webkit-fill-available;
+    height: 100%;
 
     img, .illustration { 
       height: auto;

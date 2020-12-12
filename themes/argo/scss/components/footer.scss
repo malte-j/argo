@@ -7,6 +7,10 @@ footer.site-footer {
 	margin: 60px auto;
 	padding: 0 40px;
 
+	.business_info {
+		display: none;
+	}
+
 	p {
 		text-align: center;
 	}
@@ -71,6 +75,11 @@ footer.site-footer {
 	}
 
 	@media (min-width: 450px) {
+
+		.business_info {
+			display: list-item;
+		}
+
 		#footer {
 			display: flex;
 			flex-wrap: wrap;

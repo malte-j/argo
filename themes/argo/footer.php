@@ -14,7 +14,7 @@
 	<footer id="colophon" class="site-footer">
 		<?php
 			$items_wrap = '<ul id="%1$s" class="%2$s">%3$s';
-			$items_wrap .= "<li>
+			$items_wrap .= "<li class=\"business_info\">
 				<a>Unsere Daten</a>
 				<ul class=\"sub-menu\">
 					<li>Gerichtstr. 19, DE 13347 Berlin</li>
