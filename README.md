@@ -20,6 +20,7 @@
 
 :iphone:  JS library for syncing Lottie animations to scroll
 
+&nbsp;  
 
 <h2 align="center">Setting up Argo</h2>
 
@@ -29,12 +30,15 @@ First you setup docker, for that you just need to execute `docker-compose up`. T
 
 After that, you need to install your node dependencies. Navigate to `themes/argo` and run `npm i`. Then you can build the theme for the first time. Using `npm run watch` you can start the development server, or just run `npm run pack` to build it once. Now the theme should show up as available in your WordPress install.
 
+&nbsp;
 
 <h2 align="center">Using Argo</h2>
 
 Once you've set the theme up once, you can use the `start.sh`and `stop.sh` scripts in the root folder to start and stop docker and the live server more easily.
 
 If you want to generate a zip file for uploading it to a different WordPress instance, you can run `npm run build` in the `themes/argo` folder. This will build the theme and generate an `argo.zip` file in the root folder.
+
+&nbsp;
 
 <h2 align="center">Working with CI/CD (Contributors only)</h2>
 
