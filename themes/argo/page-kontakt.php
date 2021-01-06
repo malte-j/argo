@@ -67,12 +67,8 @@ get_header();
 				
 		<label for="info" class="label">Weitere Details</label>
 		<textarea name="info" id="info" cols="12" rows="5" placeholder="Außerdem..."></textarea>
-
-		<label for="question" class="label">Was ist 5 + 3?</label>
-		<input type="text" name="question" id="question">
 			
 		<input type="submit" value="Abschicken">
-
   </form>
 	<div class="class">
 			<?php
