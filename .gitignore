@@ -7,3 +7,4 @@ plugins/regenerate-thumbnails
 plugins/ewww-image-optimizer
 plugins/autodescription
 
+.DS_Store
